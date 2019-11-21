@@ -9,7 +9,11 @@ public class Phrase {
 	private Date sinceDate;
 	private Date date;
 
-	Phrase(int idPhrase, String content, int quantity, Date sinceDate, Date date) {
+	public Phrase() {
+
+	}
+
+	public Phrase(int idPhrase, String content, int quantity, Date sinceDate, Date date) {
 		this.idPhrase = idPhrase;
 		this.content = content;
 		this.quantity = quantity;
@@ -55,6 +59,12 @@ public class Phrase {
 
 	public Date getDate() {
 		return this.date;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return String.format("'%s',%d,'%s'", this.content, this.quantity, this.sinceDate);
 	}
 
 }

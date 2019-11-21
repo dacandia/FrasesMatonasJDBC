@@ -9,7 +9,11 @@ public class Person {
 	private String career;
 	private Date date;
 
-	Person(int idPerson, String name, byte age, String career, Date date) {
+	public Person(){
+		
+	}
+	
+	public Person(int idPerson, String name, byte age, String career, Date date) {
 		this.idPerson = idPerson;
 		this.name = name;
 		this.age = age;
@@ -48,12 +52,17 @@ public class Person {
 	public String getCareer() {
 		return this.career;
 	}
-
+	
 	public void setDate(Date date) {
 		this.date = date;
 	}
 
 	public Date getDate() {
 		return this.date;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("'%s',%d,'%s'", this.name,this.age,this.career);
 	}
 }
