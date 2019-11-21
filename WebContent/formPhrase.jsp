@@ -21,7 +21,7 @@
 		</p>
 		<p>
 			<label for="txtSinceDate">Date: </label>
-			<input class="form-group" type="text" id="txtSinceDate" name="txtSinceDate">
+			<input class="form-control" type="text" id="txtSinceDate" name="txtSinceDate">
 		</p>
 		<p>
 			<input class="btn btn-warning" type="submit" value="Add">

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="utf-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +11,7 @@
 </head>
 <body>
 	<!-- Java on HTML -->
-	<h1>Here is the Persons info</h1>
+	<h1>Here is the Phrases info</h1>
 	<table class="table table-dark">
 	  <thead>
 	    <tr>
@@ -23,13 +23,13 @@
 	    </tr>
 	  </thead>
 	   <tbody>
-			<c:forEach var="person" items="${listPersons}">
+			<c:forEach var="phrase" items="${listPhrases}">
 				<tr>
-					<th>${person.getIdPerson()}</th>
-					<th>${person.getName()}</th>
-					<th>${person.getAge()}</th>
-					<th>${person.getCareer()}</th>
-					<th>${person.getDate()}</th>
+					<th>${phrase.getIdPerson()}</th>
+					<th>${phrase.getName()}</th>
+					<th>${phrase.getAge()}</th>
+					<th>${phrase.getCareer()}</th>
+					<th>${phrase.getDate()}</th>
 				</tr>
 			</c:forEach>
 		</tbody>

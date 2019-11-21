@@ -24,20 +24,13 @@ public class DataBaseManager {
 
 	public void createPerson(Person person) {
 		String query = "INSERT INTO PERSON(NAME, AGE, CAREER) VALUES("+person.toString()+");";
-		Statement stmnt = null;
-		try {
-			stmnt = connection.createStatement();
-			stmnt.executeUpdate(query);
-		}catch(SQLException e) {
-			e.getCause();
-		}
-
+		executeStatement(query);
 	}
 
 	public void createPhrase(Phrase phrase) {
 		//String query = "INSERT INTO PHRASE VALUES("+phrase.toString()+");";
 		//executeStatement(query);
-		String query = "INSERT INTO PHRASE(CONTENT,QUANTITY,sinceDate) VALUES(?,?,?)";
+		String query = "INSERT INTO PHRASE(CONTENT,QUANTITY,SINCEDATE) VALUES(?,?,?)";
 		PreparedStatement stmnt = null;
 		try {
 			stmnt = connection.prepareStatement(query);
