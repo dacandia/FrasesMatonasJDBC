@@ -6,14 +6,14 @@ public class Phrase {
 	private int idPhrase;
 	private String content;
 	private int quantity;
-	private Date sinceDate;
+	private java.sql.Date sinceDate;
 	private Date date;
 
 	public Phrase() {
 
 	}
 
-	public Phrase(int idPhrase, String content, int quantity, Date sinceDate, Date date) {
+	public Phrase(int idPhrase, String content, int quantity, java.sql.Date sinceDate, Date date) {
 		this.idPhrase = idPhrase;
 		this.content = content;
 		this.quantity = quantity;
@@ -45,11 +45,11 @@ public class Phrase {
 		return this.quantity;
 	}
 
-	public void setSinceDate(Date sinceDate) {
+	public void setSinceDate(java.sql.Date sinceDate) {
 		this.sinceDate = sinceDate;
 	}
 
-	public Date getSinceDate() {
+	public java.util.Date getSinceDate() {
 		return this.sinceDate;
 	}
 

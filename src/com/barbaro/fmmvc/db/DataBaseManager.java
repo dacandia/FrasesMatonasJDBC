@@ -1,6 +1,8 @@
 package com.barbaro.fmmvc.db;
 
 import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,14 +23,32 @@ public class DataBaseManager {
 	}
 
 	public void createPerson(Person person) {
-		String query = "INSERT INTO PERSON VALUES("+person.toString()+");";
-		executeStatement(query);
+		String query = "INSERT INTO PERSON(NAME, AGE, CAREER) VALUES("+person.toString()+");";
+		Statement stmnt = null;
+		try {
+			stmnt = connection.createStatement();
+			stmnt.executeUpdate(query);
+		}catch(SQLException e) {
+			e.getCause();
+		}
 
 	}
 
 	public void createPhrase(Phrase phrase) {
-		String query = "INSERT INTO PHRASE VALUES("+phrase.toString()+");";
-		executeStatement(query);
+		//String query = "INSERT INTO PHRASE VALUES("+phrase.toString()+");";
+		//executeStatement(query);
+		String query = "INSERT INTO PHRASE(CONTENT,QUANTITY,sinceDate) VALUES(?,?,?)";
+		PreparedStatement stmnt = null;
+		try {
+			stmnt = connection.prepareStatement(query);
+			stmnt.setString(1,phrase.getContent());
+			stmnt.setInt(2, phrase.getQuantity());
+			stmnt.setDate(3, (Date) phrase.getSinceDate());
+			
+			stmnt.executeUpdate();
+		}catch(SQLException e) {
+			e.getCause();
+		}
 		
 	}
 
