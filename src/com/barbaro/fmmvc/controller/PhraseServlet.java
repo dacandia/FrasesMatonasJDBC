@@ -30,7 +30,7 @@ public class PhraseServlet extends HttpServlet {
 		
 		phrase = dbManager.consultPhrases();
 		
-		// Sent to thw view (MVC)
+		// Sent to the view (MVC)
 		req.setAttribute("listPhrases", phrase);
 		req.getRequestDispatcher("phrases.jsp").forward(req, resp);
 	}

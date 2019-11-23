@@ -21,11 +21,11 @@ public class Phrase {
 		this.date = date;
 	}
 
-	public void setId(int idPhrase) {
+	public void setIdPhrase(int idPhrase) {
 		this.idPhrase = idPhrase;
 	}
 
-	public int getId() {
+	public int getIdPhrase() {
 		return this.idPhrase;
 	}
 

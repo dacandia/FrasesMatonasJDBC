@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+*{
+ margin: 0;
+ padding: 0;
+}
+html{
+	margin: 10%;
+	padding: 10%;
+	justify-content: center;
+}
+/* CSS which you need for blurred box */
+body{
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: top;
+ background-image:url(http://bit.ly/2gPLxZ4);
+ width: 80%;
+ height: 80%;
+ font-family: Arial, Helvetica;
+ letter-spacing: 0.02em;
+  font-weight: 400;
+ -webkit-font-smoothing: antialiased; 
+}
+input[type=button]{
+	margin: 10px;
+}
+h1{
+	color: white;
+}

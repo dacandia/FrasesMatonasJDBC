@@ -46,7 +46,7 @@ public class DataBaseManager {
 	}
 
 	public void createPhrasePerson(int idPerson, int idPhrase) {
-		String query = "INSERT INTO PHRASE_PERSON VALUES("+idPerson+","+idPhrase+")";
+		String query = "INSERT INTO PHRASE_PERSON(idPerson, idPhrase) VALUES("+idPerson+","+idPhrase+")";
 		executeStatement(query);
 	}
 
@@ -92,7 +92,7 @@ public class DataBaseManager {
 			while(resultSet.next()) {
 				Phrase phrase = new Phrase();
 				
-				phrase.setId(resultSet.getInt("idPhrase"));
+				phrase.setIdPhrase(resultSet.getInt("idPhrase"));
 				phrase.setContent(resultSet.getString("content"));
 				phrase.setQuantity(resultSet.getInt("quantity"));
 				phrase.setSinceDate(resultSet.getDate("sinceDate"));
@@ -118,7 +118,7 @@ public class DataBaseManager {
 			while(resultSet.next()) {
 				Phrase phrase = new Phrase();
 				
-				phrase.setId(resultSet.getInt("idPhrase"));
+				phrase.setIdPhrase(resultSet.getInt("idPhrase"));
 				phrase.setContent(resultSet.getString("content"));
 				phrase.setQuantity(resultSet.getInt("quantity"));
 				phrase.setSinceDate(resultSet.getDate("sinceDate"));
@@ -130,6 +130,21 @@ public class DataBaseManager {
 			e.getCause();
 		}
 		return listPhrasesPerson;
+	}
+	
+	public void deletePerson() {
+		String query = "DELETE FROM PERSON";
+		executeStatement(query);
+	}
+	
+	public void deletePhrase() {
+		String query = "DELETE FROM PHRASE";
+		executeStatement(query);
+	}
+	
+	public void deletePersonPhrase() {
+		String query = "DELETE FROM PERSON_PHRASES";
+		executeStatement(query);
 	}
 	
 	private void executeStatement(String query) {

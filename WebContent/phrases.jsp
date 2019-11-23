@@ -16,19 +16,19 @@
 	  <thead>
 	    <tr>
 	      <th scope="col">#</th>
-	      <th scope="col">Name</th>
-	      <th scope="col">Age</th>
-	      <th scope="col">Career</th>
+	      <th scope="col">Phrase</th>
+	      <th scope="col">Quantity</th>
+	      <th scope="col">sinceDate</th>
 	      <th scope="col">Date</th>
 	    </tr>
 	  </thead>
 	   <tbody>
 			<c:forEach var="phrase" items="${listPhrases}">
 				<tr>
-					<th>${phrase.getIdPerson()}</th>
-					<th>${phrase.getName()}</th>
-					<th>${phrase.getAge()}</th>
-					<th>${phrase.getCareer()}</th>
+					<th>${phrase.getIdPhrase()}</th>
+					<th>${phrase.getContent()}</th>
+					<th>${phrase.getQuantity()}</th>
+					<th>${phrase.getSinceDate()}</th>
 					<th>${phrase.getDate()}</th>
 				</tr>
 			</c:forEach>

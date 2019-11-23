@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Insert Information for Add Person</h1>
+	<h1>Insert Information to Add Person</h1>
 	<form class="form-group" action="persons" method="POST">
 		<p>
 			<label for="txtName">Name: </label>

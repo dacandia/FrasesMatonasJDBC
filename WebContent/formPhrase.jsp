@@ -9,8 +9,8 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Insert Information for Add Phrases</h1>
-	<form class="form-group" action="PhraseServlet" method="POST">
+	<h1>Insert Information to Add Phrases</h1>
+	<form class="form-group" action="phrase" method="POST">
 		<p>
 			<label for="txtContent">Content: </label>
 			<input class="form-control" type="text" id="txtContent" name="txtContent">
@@ -21,7 +21,7 @@
 		</p>
 		<p>
 			<label for="txtSinceDate">Date: </label>
-			<input class="form-control" type="text" id="txtSinceDate" name="txtSinceDate">
+			<input class="form-control" type="date" id="txtSinceDate" name="txtSinceDate">
 		</p>
 		<p>
 			<input class="btn btn-warning" type="submit" value="Add">
